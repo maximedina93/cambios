@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+
+{% block contenido %}
+	<link rel="stylesheet" href="main.css"
+	<body>
+		<div id="container">
+			<header>
+	<p class="texto-cont">BIENVENIDOS A ECOGREEN</p>
+			</header>
+		<nav>
+		<ul>
+			<li>
+	<a href="{% url 'post:alta_post' %}">CREAR POST</a><br>
+			</ul>
+		</li>
+
+		<ul>
+			<li>
+	<a href="{% url 'post:listar_post' %}">IR A POSTS</a><br>
+	<br><br>
+</ul>
+</li>
+<br><br>
+
+<ul>
+<li>
+
+</nav>
+
+	{% for r in Categoria%}
+	<ul>
+		<li>
+			<br><br>
+</ul>
+</li>
+<br><br>
+
+
+	<a href="{% url 'post:filtro' r.pk %}">
+		VER DEL Categoria {{r.nombre}}
+		<br><br>
+	</ul>
+	</li>
+	<br><br>
+	
+	</nav>
+	<div class="clearfix"></div>
+
+	</a><br>
+	
+	{% endfor %}
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+
+
+	<br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	
+
+<div class="container"> <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ecogreen-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+
+
+<footer>
+
+	Informatorio Grupo 7 &copy; 2021
+</footer>
+{% endblock contenido %}

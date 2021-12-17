@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block contenido %}
+
+
+	<p class="texto-cont">{{ "EcoGreen" }}</p>
+	<br>
+
+	<a href="{% url 'EcoGreen' %}">IR AL INICIO</a>
+	<br>
+
+	{% for a in post %}
+
+	<a href="{% url 'post:detalle' a.pk %}">
+	<p>
+		<b>{{a.nombre}}</b><br>
+		<span> {{a.categoria}}</span><br>
+
+		<img src="{{a.imagen.url}}" width="100px" height="100px">
+	</p>
+	</a>
+	{% endfor %}
+
+
+
+	<br>
+	<a href="{% url 'EcoGreen' %}">IR AL INICIO</a>
+
+
+{% endblock contenido %}

@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+</head>
+<body>
+
+	<img src="{% static 'img/logo.jpg' %}" class="image-menu">
+
+	<div class="menu"> 
+
+		<br>
+		<br>
+		<br>
+		<br>
+
+		{% if user.is_authenticated %}
+			<span>bienvenido: {{ user.username }}</span>
+			<a href="{% url 'logout' %}">CERRAR SESION </a>
+		{% else %}
+			<a href="{% url 'login' %}">LOGIN</a>
+			<a href="">REGISTRO</a>
+
+		{% endif %}
+
+
+	</div>
+
+
+	{% block contenido %}
+
+
+
+	{% endblock contenido %}
+
+
+</body>
+
+</html>
